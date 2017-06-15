@@ -1,0 +1,30 @@
+<h1>Make a Call to the Server</h1>
+
+<p *ngIf="!auth.isAuthenticated()">
+  Log in to call a private (secured) server endpoint.
+</p>
+
+<button class="btn btn-primary" (click)="getDocuments()" *ngIf="auth.isAuthenticated()">
+    Click to get Documents
+</button> 
+
+<br>
+<div class='row' *ngIf="list.length > 0">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class='panel-heading'>Document List</div>
+    <div class='panel-body'>
+      <table class="table table-bordered">
+        <thead>
+          <th>Id</th>
+          <th>Institution</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list">
+            <td>{{item.id}}</td>
+            <td>{{item.institution}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
