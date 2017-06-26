@@ -3,19 +3,22 @@ import { AuthHttp } from 'angular2-jwt';
 import { Http } from '@angular/http';
 import { AuthService } from './../auth/auth.service';
 import 'rxjs/add/operator/map';
-
+import { HttpClientService } from '../service/httpclient.service'
 @Component({
   selector: 'app-ping',
   templateUrl: './ping.component.html'
 })
 export class PingComponent implements OnInit {
 
-  API_URL = 'http://localhost:51082/api';
+  API_URL = 'http://localhost:5000/api';
   message: string;
+
 
   list: Array<any> = [];
 
-  constructor(public auth: AuthService, public http: Http, public authHttp: AuthHttp) { }
+  constructor(public auth: AuthService, public http: Http, public authHttp: AuthHttp, private httpClient: HttpClientService) {
+
+  }
 
   ngOnInit() {
   }

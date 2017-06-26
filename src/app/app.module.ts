@@ -15,11 +15,13 @@ import { PingComponent } from './ping/ping.component';
 import { CallbackComponent } from './callback/callback.component';
 
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
+import { HttpClientService } from './service/httpclient.service';
+import { StorageService } from './service/storage.service';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
     tokenGetter: (() => localStorage.getItem('access_token')),
-    globalHeaders: [{'Content-Type': 'application/json'}],
+    globalHeaders: [{ 'Content-Type': 'application/json' }],
   }), http, options);
 }
 
@@ -43,7 +45,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
       provide: AuthHttp,
       useFactory: authHttpServiceFactory,
       deps: [Http, RequestOptions]
-    }
+    },
+    StorageService,
+    HttpClientService
   ],
   bootstrap: [AppComponent]
 })
