@@ -13,6 +13,7 @@ import { Config } from '../config/app.config';
 export class HomeComponent implements OnInit {
 
   token: string;
+  list: Array<any> = [];
   constructor(public auth: AuthService, private httpClient: HttpClientService, private storage: StorageService, private http: Http) { }
 
   ngOnInit() {
@@ -32,7 +33,7 @@ export class HomeComponent implements OnInit {
       // Gets the document list
       debugger;
       console.log(response);
+      this.list = response;
     });
   }
 }
-  

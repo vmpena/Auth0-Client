@@ -4,3 +4,24 @@
 <h4 *ngIf="!auth.isAuthenticated()">
   You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
 </h4>
+
+
+<div class='row' *ngIf="list.length > 0">
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class='panel-heading'>Document List</div>
+    <div class='panel-body'>
+      <table class="table table-bordered">
+        <thead>
+          <th>Id</th>
+          <th>Institution</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list">
+            <td>{{item.id}}</td>
+            <td>{{item.institution}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
