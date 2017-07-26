@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 
   token: string;
   list: Array<any> = [];
+
   constructor(public auth: AuthService, private httpClient: HttpClientService, private storage: StorageService, private http: Http) { }
 
   ngOnInit() {
@@ -21,8 +22,14 @@ export class HomeComponent implements OnInit {
   }
 
   getToken() {
-    this.httpClient.post(Config.tokenEndpoint, Config.grant_token, false).subscribe(response => {
+    console.log("Inside getToken()", Config.tokenEndpoint);
+
+    this.httpClient.post(Config.tokenEndpoint, Config.grant_token, false).subscribe(response =>
+    {
       this.token = response.access_token;
+
+      console.log(this.token);
+
       this.storage.put('token', response.access_token);
       this.getDocuments();
     });

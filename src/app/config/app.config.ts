@@ -2,22 +2,22 @@
 
 export class Config {
 
-    static apiEndpoint = 'http://localhost:5000/api/test';
+    static apiEndpoint = 'https://api.occwatch.com/api/test';
 
-    static tokenEndpoint = 'https://vmpena.auth0.com/oauth/token';
+    static tokenEndpoint = 'https://occwatch.auth0.com/oauth/token';
 
     static grant_token = {
-        "client_id": "PG4TyD0Bi3EHdUYam5ZDdCSpgZiMNLeT",
-        "client_secret": "FAw-Z0JD34_p4j07Wvpp-OjLABdhNS4PvccWNt9u-0LxI2mHCYAxxBiuwmAXGy_V",
-        "audience": "https://api.vmpena.com",
+        "client_id": "gGppfae7TZMOG9Po9u98XhzfWmgaQ50M",
+        "client_secret": "ZVVwNuZyx8GymKko62q41cBg7LExUD8FH0LXgyD5duVuZ_POZsASjlg8x3HNV_Jk",
+        "audience": "https://api.occwatch.com",
         "grant_type": "client_credentials"
     };
 
     static AUTH_CONFIG: AuthConfig = {
           clientID: 'PG4TyD0Bi3EHdUYam5ZDdCSpgZiMNLeT',
-          domain: 'vmpena.auth0.com',
+          domain: 'occwatch.auth0.com',
           callbackURL: 'http://localhost:4200/callback',
-          apiUrl: 'https://api.vmpena.com'
+          apiUrl: 'https://api.occwatch.com'
     };
 }
 

@@ -1,9 +1,4 @@
-<h4 *ngIf="auth.isAuthenticated()">
-  You are logged in! You can now <a routerLink="/ping">send authenticated requests</a> to your server.
-</h4>
-<h4 *ngIf="!auth.isAuthenticated()">
-  You are not logged in! Please <a (click)="auth.login()">Log In</a> to continue.
-</h4>
+<h1>Welcome to Document Central</h1>
 
 
 <div class='row' *ngIf="list.length > 0">
@@ -25,3 +20,4 @@
       </table>
     </div>
   </div>
+</div>
