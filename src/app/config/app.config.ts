@@ -7,8 +7,8 @@ export class Config {
     static tokenEndpoint = 'https://occwatch.auth0.com/oauth/token';
 
     static grant_token = {
-        "client_id": "gGppfae7TZMOG9Po9u98XhzfWmgaQ50M",
-        "client_secret": "ZVVwNuZyx8GymKko62q41cBg7LExUD8FH0LXgyD5duVuZ_POZsASjlg8x3HNV_Jk",
+        "client_id": "PdL1aqX75m2gGdYJvchsoqnItiICNTek",
+        "client_secret": "ZYFy-goRhKjS5YlY2lVZ9pQ2FGDZ2zZqLvOTYEcZx37ZLeKq8vT2vr3THF_Ss4vg",
         "audience": "https://api.occwatch.com",
         "grant_type": "client_credentials"
     };

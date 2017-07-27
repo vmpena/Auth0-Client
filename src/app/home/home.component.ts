@@ -23,12 +23,11 @@ export class HomeComponent implements OnInit {
 
   getToken() {
     console.log("Inside getToken()", Config.tokenEndpoint);
+    console.log("config.grant_Token()", Config.grant_token);
 
     this.httpClient.post(Config.tokenEndpoint, Config.grant_token, false).subscribe(response =>
     {
       this.token = response.access_token;
-
-      console.log(this.token);
 
       this.storage.put('token', response.access_token);
       this.getDocuments();
@@ -36,9 +35,12 @@ export class HomeComponent implements OnInit {
   }
 
   getDocuments(): void {
+    console.log("------ Inside getDocuments(): ");
+
+    // debugger;
+
     this.httpClient.get(Config.apiEndpoint, true).subscribe(response => {
       // Gets the document list
-      debugger;
       console.log(response);
       this.list = response;
     });
