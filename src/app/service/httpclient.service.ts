@@ -53,7 +53,7 @@ export class HttpClientService {
         // headers.append('Accept', 'application/json');
         // headers.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
         headers.append('Content-Type', 'application/json');
-        // headers.append('Access-Control-Allow-Origin', '*');
+        headers.append('Access-Control-Allow-Origin', '*');
 
         console.log("Headers: ", headers);
 

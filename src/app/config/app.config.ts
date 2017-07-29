@@ -2,22 +2,22 @@
 
 export class Config {
 
-    static apiEndpoint = 'https://api.occwatch.com/api/test';
+    static apiEndpoint = 'http://testdocs.azurewebsites.net/api/documents';
 
-    static tokenEndpoint = 'https://occwatch.auth0.com/oauth/token';
+    static tokenEndpoint = 'https://testdocs.auth0.com/oauth/token';
 
     static grant_token = {
-        "client_id": "PdL1aqX75m2gGdYJvchsoqnItiICNTek",
-        "client_secret": "ZYFy-goRhKjS5YlY2lVZ9pQ2FGDZ2zZqLvOTYEcZx37ZLeKq8vT2vr3THF_Ss4vg",
-        "audience": "https://api.occwatch.com",
+        "client_id": "?????",
+        "client_secret": "?????",
+        "audience": "http://testdocs.azurewebsites.net/",
         "grant_type": "client_credentials"
     };
 
     static AUTH_CONFIG: AuthConfig = {
-          clientID: 'PG4TyD0Bi3EHdUYam5ZDdCSpgZiMNLeT',
-          domain: 'occwatch.auth0.com',
+          clientID: '??????',
+          domain: 'testdocs.auth0.com',
           callbackURL: 'http://localhost:4200/callback',
-          apiUrl: 'https://api.occwatch.com'
+          apiUrl: 'http://testdocs.azurewebsites.net/'
     };
 }
 
