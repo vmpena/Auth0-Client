@@ -24,8 +24,8 @@ export class HttpClientService {
         let body = data;
 
         console.log("-------- Inside httpClient.post ----------- ");
-        console.log("data: ", data);
-        console.log("endpoint", endpoint);
+        // console.log("data: ", data);
+        // console.log("endpoint", endpoint);
 
         if (typeof data === 'object' || data instanceof Array) {
             body = JSON.stringify(data);
@@ -44,7 +44,7 @@ export class HttpClientService {
     private getHeaders(isSecured: boolean): Headers {
         const headers = new Headers();
 
-        console.log("isSecured: ", isSecured);
+        // console.log("isSecured: ", isSecured);
 
         if (isSecured) {
             const token = this.storageService.get('token');
@@ -55,7 +55,7 @@ export class HttpClientService {
         headers.append('Content-Type', 'application/json');
         headers.append('Access-Control-Allow-Origin', '*');
 
-        console.log("Headers: ", headers);
+        // console.log("Headers: ", headers);
 
         return headers;
     }
@@ -73,7 +73,7 @@ export class HttpClientService {
             errMsg = error.message ? error.message : error.toString();
         }
 
-        console.error("Error Message: ", errMsg);
+        // console.error("Error Message: ", errMsg);
         return Observable.throw(errMsg);
     }
 };
